@@ -9,7 +9,7 @@
                 color: red;
             }
             #first{
-                color:green;
+                color:#1B5E20;
             }
             spen{
                 color:blue;
@@ -27,13 +27,63 @@
         document.querySelector('body').style.backgroundColor='white';
         document.querySelector('body').style.color='black';
         ">
+        <h1><a href="index.html">WEB</a></h1>
+        <h2 style="color:#424242;background-color:#E9E9E9;">JavaScript</h2>
+        <p>
+            <span id="first" class="js">JavaScript</span> (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside <span>HTML</span> and <span>CSS</span>, <span class="js">JavaScript</span> is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in <span class="js">JavaScript</span> engine. Each of the many <span class="js">JavaScript</span> engines represent a different implementation of <span class="js">JavaScript</span>, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
+        </p>
+        
+        <ul>
+            <script>
+                for (var i = 0; i < coworkers.length; i++){
+                    document.write('<li>'+coworkers[i]+'</li>')
+                }
+            </script>
+        </ul>
+        <script>
+            $('body').css('background-color', '#F9F9F9');
+        </script>
+        <hr />
+        <a href="#three">three</a>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam minima voluptatum iure iusto, sequi aperiam, totam reiciendis cum consequatur molestias exercitationem ex nulla? Reiciendis velit odit minus dolore, nihil consequuntur qui pariatur nesciunt cupiditate debitis porro, autem recusandae necessitatibus assumenda aut a molestias in aliquam eligendi, eius totam. Reprehenderit deleniti consequuntur incidunt culpa fuga maxime sed, reiciendis voluptate facere sapiente, pariatur! Suscipit possimus a at corrupti rerum. Pariatur praesentium, veniam vitae voluptates, quidem labore impedit ab quos soluta modi eveniet quia mollitia quod natus iste earum, dolorem minus! Ullam possimus commodi alias, et reiciendis provident quidem nesciunt atque repellendus cum?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam minima voluptatum iure iusto, sequi aperiam, totam reiciendis cum consequatur molestias exercitationem ex nulla? Reiciendis velit odit minus dolore, nihil consequuntur qui pariatur nesciunt cupiditate debitis porro, autem recusandae necessitatibus assumenda aut a molestias in aliquam eligendi, eius totam. Reprehenderit deleniti consequuntur incidunt culpa fuga maxime sed, reiciendis voluptate facere sapiente, pariatur! Suscipit possimus a at corrupti rerum. Pariatur praesentium, veniam vitae voluptates, quidem labore impedit ab quos soluta modi eveniet quia mollitia quod natus iste earum, dolorem minus! Ullam possimus commodi alias, et reiciendis provident quidem nesciunt atque repellendus cum?
+        </p>
+        <p id="three">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam minima voluptatum iure iusto, sequi aperiam, totam reiciendis cum consequatur molestias exercitationem ex nulla? Reiciendis velit odit minus dolore, nihil consequuntur qui pariatur nesciunt cupiditate debitis porro, autem recusandae necessitatibus assumenda aut a molestias in aliquam eligendi, eius totam. Reprehenderit deleniti consequuntur incidunt culpa fuga maxime sed, reiciendis voluptate facere sapiente, pariatur! Suscipit possimus a at corrupti rerum. Pariatur praesentium, veniam vitae voluptates, quidem labore impedit ab quos soluta modi eveniet quia mollitia quod natus iste earum, dolorem minus! Ullam possimus commodi alias, et reiciendis provident quidem nesciunt atque repellendus cum?
+        </p>
+        <hr />
+        <ol id="nav">
+        </ol>
+        <article>
+
+        </article>
+        <script>
+            function fetchPage(name) {
+                fetch(name).then(function(response) {
+                    response.text().then(function(text) {
+                        document.querySelector('article').innerHTML = text;
+                    })
+                });
+            }
+            if(location.hash) {
+                console.log(location.hash)
+            } else {
+                console.log('welcome')
+            }
+            fetch('list').then(function(response){
+                response.text().then(function(text){
+                    document.querySelector('#nav').innerHTML = text;
+                })
+            })
+        </script>
+        <hr />
         <input type="button" value="HI" onclick="alert('onclick')">
         <input type="text" value="HI" onchange="alert('onchange')">
         <input type="text" value="HI" onkeydown="alert('onkeydown')">
-        <h1><a href="index.html">WEB</a></h1>
-        <h2 style="color:powderblue;background-color: coral;">JavaScript</h2>
-        <p><span id="first" class="js">2019년 12월</span> 중국 <spen>우한에서</spen> 처음 발생한 뒤 전 세계로 확산된, 새로운 유형의 코로나바이러스(SARS-CoV-2)에 의한 호흡기 감염질환이다. 코로나바이러스감염증-19는 감염자의 비말(침방울)이 호흡기나 눈·코·입의 점막으로 침투될 때 전염된다. 감염되면 약 2~14일(추정)의 잠복기를 거친 뒤 발열(37.5도) 및 기침이나 호흡곤란 등 호흡기 증상, 폐렴이 주증상으로 나타나지만 무증상 감염 사례도 드물게 나오고 있다.
-            [네이버 지식백과] <spen class="js">코로나바이러스감염증</spen>-19 - COVID-19 (시사상식사전, pmg 지식엔진연구소)</p>
+
         <hr />
         <span>
             <h3>1&lt;1</h3>
@@ -86,50 +136,6 @@
             </script>
         </span>
         <hr />
-        <ul>
-            <script>
-                for (var i = 0; i < coworkers.length; i++){
-                    document.write('<li>'+coworkers[i]+'</li>')
-                }
-            </script>
-        </ul>
-        <script>
-            $('body').css('background-color', '#DCDCDC');
-        </script>
-        <hr />
-        <a href="#three">three</a>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam minima voluptatum iure iusto, sequi aperiam, totam reiciendis cum consequatur molestias exercitationem ex nulla? Reiciendis velit odit minus dolore, nihil consequuntur qui pariatur nesciunt cupiditate debitis porro, autem recusandae necessitatibus assumenda aut a molestias in aliquam eligendi, eius totam. Reprehenderit deleniti consequuntur incidunt culpa fuga maxime sed, reiciendis voluptate facere sapiente, pariatur! Suscipit possimus a at corrupti rerum. Pariatur praesentium, veniam vitae voluptates, quidem labore impedit ab quos soluta modi eveniet quia mollitia quod natus iste earum, dolorem minus! Ullam possimus commodi alias, et reiciendis provident quidem nesciunt atque repellendus cum?
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam minima voluptatum iure iusto, sequi aperiam, totam reiciendis cum consequatur molestias exercitationem ex nulla? Reiciendis velit odit minus dolore, nihil consequuntur qui pariatur nesciunt cupiditate debitis porro, autem recusandae necessitatibus assumenda aut a molestias in aliquam eligendi, eius totam. Reprehenderit deleniti consequuntur incidunt culpa fuga maxime sed, reiciendis voluptate facere sapiente, pariatur! Suscipit possimus a at corrupti rerum. Pariatur praesentium, veniam vitae voluptates, quidem labore impedit ab quos soluta modi eveniet quia mollitia quod natus iste earum, dolorem minus! Ullam possimus commodi alias, et reiciendis provident quidem nesciunt atque repellendus cum?
-        </p>
-        <p id="three">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam minima voluptatum iure iusto, sequi aperiam, totam reiciendis cum consequatur molestias exercitationem ex nulla? Reiciendis velit odit minus dolore, nihil consequuntur qui pariatur nesciunt cupiditate debitis porro, autem recusandae necessitatibus assumenda aut a molestias in aliquam eligendi, eius totam. Reprehenderit deleniti consequuntur incidunt culpa fuga maxime sed, reiciendis voluptate facere sapiente, pariatur! Suscipit possimus a at corrupti rerum. Pariatur praesentium, veniam vitae voluptates, quidem labore impedit ab quos soluta modi eveniet quia mollitia quod natus iste earum, dolorem minus! Ullam possimus commodi alias, et reiciendis provident quidem nesciunt atque repellendus cum?
-        </p>
-        <hr />
-        <ol id="nav">
-            <li><a href="#!html" onclick="fetchPage('html')">html</a></li>
-            <li><a href="#!css" onclick="fetchPage('css')">css</a></li>
-            <li><a href="#!javascript" onclick="fetchPage('javascript')">javascript</a></li>
-        </ol>
-        <article>
-
-        </article>
-        <script>
-            function fetchPage(name) {
-                fetch(name).then(function(response) {
-                    response.text().then(function(text) {
-                        document.querySelector('article').innerHTML = text;
-                    })
-                });
-            }
-            if(location.hash) {
-                console.log(location.hash)
-            } else {
-                console.log('welcome')
-            }
-        </script>
         <!--
         JavaScript Data types
         The latest ECMAScript standard defines seven data types:
