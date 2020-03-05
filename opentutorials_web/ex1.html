@@ -75,6 +75,7 @@
             }
             fetch('list').then(function(response){
                 response.text().then(function(text){
+                    console.log(text);
                     document.querySelector('#nav').innerHTML = text;
                 })
             })
