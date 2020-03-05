@@ -81,11 +81,10 @@
                     while (i < items.length){
                         var item = items[i];
                         var tag = '<li><a href="#!'+item+'" onclick="fetchPage(\''+item+'\')">'+item+'</a></li>';
-                        console.log(tag);
                         tags = tags + tag;
                         i = i + 1;
                     }
-                    document.querySelector('#nav').innerHTML = text;
+                    document.querySelector('#nav').innerHTML = tags;
                 })
             })
         </script>
