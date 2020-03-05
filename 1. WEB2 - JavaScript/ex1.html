@@ -3,8 +3,146 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <style>
+            .js{
+                font-weight: bold;
+                color: red;
+            }
+            #first{
+                color:green;
+            }
+            spen{
+                color:blue;
+            }
+            /* class가 더 포괄적, ID가 더 정확하게 타겟팅 */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
-        
+        <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        ">
+        <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        ">
+        <input type="button" value="HI" onclick="alert('onclick')">
+        <input type="text" value="HI" onchange="alert('onchange')">
+        <input type="text" value="HI" onkeydown="alert('onkeydown')">
+        <h1><a href="index.html">WEB</a></h1>
+        <h2 style="color:powderblue;background-color: coral;">JavaScript</h2>
+        <p><span id="first" class="js">2019년 12월</span> 중국 <spen>우한에서</spen> 처음 발생한 뒤 전 세계로 확산된, 새로운 유형의 코로나바이러스(SARS-CoV-2)에 의한 호흡기 감염질환이다. 코로나바이러스감염증-19는 감염자의 비말(침방울)이 호흡기나 눈·코·입의 점막으로 침투될 때 전염된다. 감염되면 약 2~14일(추정)의 잠복기를 거친 뒤 발열(37.5도) 및 기침이나 호흡곤란 등 호흡기 증상, 폐렴이 주증상으로 나타나지만 무증상 감염 사례도 드물게 나오고 있다.
+            [네이버 지식백과] <spen class="js">코로나바이러스감염증</spen>-19 - COVID-19 (시사상식사전, pmg 지식엔진연구소)</p>
+        <hr />
+        <span>
+            <h3>1&lt;1</h3>
+            <script>
+                document.write(1<1);
+            </script>
+        </span>
+        <span>
+            <input type="button" value="night" onclick="
+                var target = document.querySelector('body');
+                if(this.value === 'night'){
+                    target.style.backgroundColor='black';
+                    target.style.color='white';
+                    this.value = 'day'
+                }else{
+                    target.style.backgroundColor='white';
+                    target.style.color='black';
+                    this.value = 'night'
+                }
+            ">
+            <input type="button" id="night_day" value="night" onclick="
+            var target = document.querySelector('body');
+            if(this.value === 'night'){
+                target.style.backgroundColor='black';
+                target.style.color='white';
+                this.value = 'day'
+            }else{
+                target.style.backgroundColor='white';
+                target.style.color='black';
+                this.value = 'night'
+            }
+            ">
+        </span>
+        <hr />
+        <span>
+            <h2 style="display: inline;">get</h2>
+            <script>
+                var coworkers = ["aaa", "bbb"];
+            </script>
+            <script>
+                document.write(coworkers[0]);
+                document.write(coworkers[1]);
+                document.write(coworkers.length);
+            </script>
+            <h2 style="display: inline;">add</h2>
+            <script>
+                coworkers.push("ccc");
+                coworkers.push("ddd");
+                document.write(coworkers.length);
+            </script>
+        </span>
+        <hr />
+        <ul>
+            <script>
+                for (var i = 0; i < coworkers.length; i++){
+                    document.write('<li>'+coworkers[i]+'</li>')
+                }
+            </script>
+        </ul>
+        <script>
+            $('body').css('background-color', '#DCDCDC');
+        </script>
+        <hr />
+        <a href="#three">three</a>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam minima voluptatum iure iusto, sequi aperiam, totam reiciendis cum consequatur molestias exercitationem ex nulla? Reiciendis velit odit minus dolore, nihil consequuntur qui pariatur nesciunt cupiditate debitis porro, autem recusandae necessitatibus assumenda aut a molestias in aliquam eligendi, eius totam. Reprehenderit deleniti consequuntur incidunt culpa fuga maxime sed, reiciendis voluptate facere sapiente, pariatur! Suscipit possimus a at corrupti rerum. Pariatur praesentium, veniam vitae voluptates, quidem labore impedit ab quos soluta modi eveniet quia mollitia quod natus iste earum, dolorem minus! Ullam possimus commodi alias, et reiciendis provident quidem nesciunt atque repellendus cum?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam minima voluptatum iure iusto, sequi aperiam, totam reiciendis cum consequatur molestias exercitationem ex nulla? Reiciendis velit odit minus dolore, nihil consequuntur qui pariatur nesciunt cupiditate debitis porro, autem recusandae necessitatibus assumenda aut a molestias in aliquam eligendi, eius totam. Reprehenderit deleniti consequuntur incidunt culpa fuga maxime sed, reiciendis voluptate facere sapiente, pariatur! Suscipit possimus a at corrupti rerum. Pariatur praesentium, veniam vitae voluptates, quidem labore impedit ab quos soluta modi eveniet quia mollitia quod natus iste earum, dolorem minus! Ullam possimus commodi alias, et reiciendis provident quidem nesciunt atque repellendus cum?
+        </p>
+        <p id="three">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam minima voluptatum iure iusto, sequi aperiam, totam reiciendis cum consequatur molestias exercitationem ex nulla? Reiciendis velit odit minus dolore, nihil consequuntur qui pariatur nesciunt cupiditate debitis porro, autem recusandae necessitatibus assumenda aut a molestias in aliquam eligendi, eius totam. Reprehenderit deleniti consequuntur incidunt culpa fuga maxime sed, reiciendis voluptate facere sapiente, pariatur! Suscipit possimus a at corrupti rerum. Pariatur praesentium, veniam vitae voluptates, quidem labore impedit ab quos soluta modi eveniet quia mollitia quod natus iste earum, dolorem minus! Ullam possimus commodi alias, et reiciendis provident quidem nesciunt atque repellendus cum?
+        </p>
+        <script>
+            if(location.hash) {
+                console.log(location.hash)
+            } else {
+                console.log('aaa')
+            }
+        </script>
+        <hr />
+        <article>
+
+        </article>
+        <input type="button" value="fetch" onclick="
+          /*
+          fetch('html').then(function(response){
+            response.text().then(function(text){
+              document.querySelector('article').innerHTML = text;
+            })
+          })
+          */
+          //Asynchronous
+          fetch('html').then(function(response){
+            response.text().then(function(text){
+              document.querySelector('article').innerHTML = text;
+            })
+          });
+        ">
+        <!--
+        JavaScript Data types
+        The latest ECMAScript standard defines seven data types:
+        1. Boolean
+        2. Null
+        3. Undefined
+        4. Number
+        5. String
+        6. Symbol (new in ECMAScript6)
+        and Object
+         -->
     </body>
 </html>
