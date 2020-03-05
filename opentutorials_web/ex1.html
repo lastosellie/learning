@@ -107,32 +107,29 @@
         <p id="three">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam minima voluptatum iure iusto, sequi aperiam, totam reiciendis cum consequatur molestias exercitationem ex nulla? Reiciendis velit odit minus dolore, nihil consequuntur qui pariatur nesciunt cupiditate debitis porro, autem recusandae necessitatibus assumenda aut a molestias in aliquam eligendi, eius totam. Reprehenderit deleniti consequuntur incidunt culpa fuga maxime sed, reiciendis voluptate facere sapiente, pariatur! Suscipit possimus a at corrupti rerum. Pariatur praesentium, veniam vitae voluptates, quidem labore impedit ab quos soluta modi eveniet quia mollitia quod natus iste earum, dolorem minus! Ullam possimus commodi alias, et reiciendis provident quidem nesciunt atque repellendus cum?
         </p>
-        <script>
-            if(location.hash) {
-                console.log(location.hash)
-            } else {
-                console.log('aaa')
-            }
-        </script>
         <hr />
+        <ol id="nav">
+            <li><a href="#!html" onclick="fetchPage('html')">html</a></li>
+            <li><a href="#!css" onclick="fetchPage('css')">css</a></li>
+            <li><a href="#!javascript" onclick="fetchPage('javascript')">javascript</a></li>
+        </ol>
         <article>
 
         </article>
-        <input type="button" value="fetch" onclick="
-          /*
-          fetch('html').then(function(response){
-            response.text().then(function(text){
-              document.querySelector('article').innerHTML = text;
-            })
-          })
-          */
-          //Asynchronous
-          fetch('html').then(function(response){
-            response.text().then(function(text){
-              document.querySelector('article').innerHTML = text;
-            })
-          });
-        ">
+        <script>
+            function fetchPage(name) {
+                fetch(name).then(function(response) {
+                    response.text().then(function(text) {
+                        document.querySelector('article').innerHTML = text;
+                    })
+                });
+            }
+            if(location.hash) {
+                console.log(location.hash)
+            } else {
+                console.log('welcome')
+            }
+        </script>
         <!--
         JavaScript Data types
         The latest ECMAScript standard defines seven data types:
